@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wgh@300;400;600;700&display=swap');
+:root
+{
+  --white: #fff;
+  --black: #000;
+  --blue: #31326f;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-gray: #222831;
+  --light-blue: #005490;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html
+{
+  font-size: 10px;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: var(--black);
+}
+
+p{
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.container
+{
+  background: url("../img/bg.jpg");
+  position: relative;
+}
+
+container::after
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-blue);
+}
+.game
+{
+  width: 500px;
+  height: 200px;
+  border-bottom: 3px solid var(--white);
+  margin: auto;
+}
+.ash_character
+{
+  width: 20px;
+  height: 50px;
+  position: relative;
+  top: 150px;
+  left: 20px;
+  z-index: 1;
+}
+.animate
+{
+  animation: jump 0.3s linear;
+}
+@keyframes jump {
+  0%{
+    top:150px;
+  }
+  30%{
+    top:150px;
+  }
+  50%{
+    top:60px;
+  }
+  70%{
+    top:100px;
+  }
+  100%{
+    top:150px;
+  }
+
+}
+
+.pikachu
+{
+  width:20px;
+  height: 50px;
+  position: relative;
+  top: 100px;
+  left: 350px;
+  animation: move 1s infinite linear;
+  z-index: 1;
+}
+@keyframes move {
+  0%{
+    left:480px;
+  }
+  100%{
+    left:-20px;
+  }
+}
+img
+{
+  width: 50px;
+  height: 50px;
+}
