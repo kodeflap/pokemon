@@ -34,12 +34,21 @@ body{
 p{
   font-size: 1.6rem;
   line-height: 1.5;
-  color: var(--white);
+  display: inline;
+  color: var(--black);
 }
-
+.top
+{
+  display: flex;
+  justify-content: space-between;
+  top:2rem;
+  padding: 1rem;
+  left: 1rem;
+  align-content: space-between;
+}
 .container
 {
-  background: url("../img/bg.jpg");
+  background: url("../img/bg.jpg") center no-repeat;
   position: relative;
 }
 
@@ -56,7 +65,7 @@ container::after
 .game
 {
   width: 500px;
-  height: 200px;
+  height: 250px;
   border-bottom: 3px solid var(--white);
   margin: auto;
 }
@@ -65,7 +74,7 @@ container::after
   width: 20px;
   height: 50px;
   position: relative;
-  top: 150px;
+  top: 200px;
   left: 20px;
   z-index: 1;
 }
@@ -78,7 +87,7 @@ container::after
     top:150px;
   }
   30%{
-    top:150px;
+    top:100px;
   }
   50%{
     top:60px;
@@ -95,16 +104,16 @@ container::after
 .pikachu
 {
   width:20px;
-  height: 50px;
+  height: 30px;
   position: relative;
-  top: 100px;
+  top: 150px;
   left: 350px;
   animation: move 1s infinite linear;
   z-index: 1;
 }
 @keyframes move {
   0%{
-    left:480px;
+    left:500px;
   }
   100%{
     left:-20px;
